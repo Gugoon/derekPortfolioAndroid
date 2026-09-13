@@ -1,0 +1,25 @@
+# Gradle / Kotlin / 빌드 산출물
+.gradle/
+build/
+.kotlin/
+.externalNativeBuild/
+.cxx/
+captures/
+
+# 로컬 환경 (SDK 경로 등)
+local.properties
+
+# IDE / OS
+*.iml
+.idea/
+.DS_Store
+
+# 배포 산출물과 서명 키
+*.apk
+*.aab
+*.jks
+*.keystore
+keystore.properties
+
+# 로그
+*.log
