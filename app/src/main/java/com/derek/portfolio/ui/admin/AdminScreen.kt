@@ -472,7 +472,7 @@ private fun AdminTabs(
                     onSaveOne = { viewModel.saveProject(ready.projects, it) },
                     onSaveAll = { viewModel.saveAllProjects(ready.projects) },
                     onDelete = { viewModel.deleteProject(ready.projects, it) },
-                    onMove = { index, delta -> viewModel.moveProject(ready.projects, index, delta) },
+                    onReorder = { viewModel.saveProjectOrder(ready.projects) },
                 )
                 else -> {
                     LaunchedEffect(ready.visits) { viewModel.loadVisitsIfNeeded(ready.visits) }

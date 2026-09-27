@@ -304,10 +304,8 @@ class AdminViewModel @Inject constructor(
         }
     }
 
-    /** 순서를 바꾸고 곧바로 저장한다. 새 항목은 저장 시점에 순서가 잡힌다. */
-    fun moveProject(state: ProjectsEditorState, index: Int, delta: Int) {
-        if (index + delta !in state.drafts.indices) return
-        state.drafts.move(index, delta)
+    /** 드래그로 바꾼 지금 목록 순서를 곧바로 저장한다. 새 항목은 저장 시점에 순서가 잡힌다. */
+    fun saveProjectOrder(state: ProjectsEditorState) {
         viewModelScope.launch {
             try {
                 projectWrites.withLock {
